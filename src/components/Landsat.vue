@@ -44,7 +44,7 @@
 
       <!-- input coordinates -->
       <v-row class="text-center justify-center mt-12 ml-16">
-         <v-col cols="3">
+         <v-col cols="10" sm="6" md="3">
             <v-form ref="form" v-model="validForm" lazy-validation>
                <v-text-field
                   v-model="coordinates"
@@ -59,7 +59,7 @@
                ></v-text-field>
             </v-form>
          </v-col>
-         <v-col cols="1" class="mt-2">
+         <v-col cols="3" sm="2" class="mt-2">
             <v-btn rounded dark color="primary" @click="apiRequest">
                <v-icon left>fa-search</v-icon>Search
             </v-btn>
@@ -67,7 +67,7 @@
       </v-row>
 
       <!-- nine tiles -->
-      <v-card width="800" class="mx-auto" elevation="0">
+      <v-card width="800" class="mx-auto mt-10" elevation="0">
          <v-row class="mx-16">
             <v-col
                v-for="(img, index) in imgTiles"
@@ -82,7 +82,7 @@
                   height="200"
                >
                   <v-img :src="img.imgUrl" height="200">
-                     <template v-if="img.imgUrl != ''" v-slot:placeholder>
+                     <template v-if="loading != ''" v-slot:placeholder>
                         <v-row
                            class="fill-height my-0"
                            align="center"
@@ -187,7 +187,7 @@ export default {
                         el.lon +
                         '&lat=' +
                         el.lat +
-                        '&date=2018-01-01&&dim=' +
+                        '&date=2018-01-01&dim=' +
                         me.dim +
                         '&api_key=' +
                         me.key
