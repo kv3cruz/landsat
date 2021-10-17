@@ -109,7 +109,7 @@ export default {
 
    data: () => ({
       // data
-      coordinates: '29.78,-95.33',
+      coordinates: '11.24079, -74.19904',
       loading: false,
       validForm: true,
       key: 'm8MKhrZocMUxWw0HrDtinnBzJZogeCPMnZewT01W',
@@ -181,6 +181,7 @@ export default {
                      el.lon = lonO + me.dim
                      break
                }
+               el.imgUrl = ''
                axios
                   .get(
                      'https://api.nasa.gov/planetary/earth/assets?lon=' +
