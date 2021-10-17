@@ -14,11 +14,7 @@
 
          <v-spacer></v-spacer>
 
-         <v-btn
-            href="https://github.com/vuetifyjs/vuetify/releases/latest"
-            target="_blank"
-            text
-         >
+         <v-btn href="https://github.com/kv3cruz/landsat" target="_blank" text>
             <span class="mr-2">Repository</span>
             <v-icon>fa-share-square</v-icon>
          </v-btn>
